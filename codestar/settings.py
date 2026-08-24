@@ -37,6 +37,12 @@ ALLOWED_HOSTS = [
 ]
 
 
+# Allegedly this is required but I'll leave it out until something fails
+# CSRF_TRUSTED_ORIGINS = [
+#     "http://127.0.0.1",
+#     "https://*.herokuapp.com",
+# ]
+
 # Application definition
 
 INSTALLED_APPS = [
