@@ -37,7 +37,10 @@ ALLOWED_HOSTS = [
 ]
 
 
-# Allegedly this is required but I'll leave it out until something fails
+# Allegedly this is required but I'll leave it out until something fails.
+# Apparently, it allows form submissions from domains other than the current
+# host. I could see this being useful (e.g. with an API server) but I can't
+# see the point here.
 # CSRF_TRUSTED_ORIGINS = [
 #     "http://127.0.0.1",
 #     "https://*.herokuapp.com",
