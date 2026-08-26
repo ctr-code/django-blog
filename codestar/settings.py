@@ -49,12 +49,14 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    # Disable the default static serving in debug mode
     'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    # This cannot be removed because it implements collectstatic
     'django.contrib.staticfiles',
     'blog',
     'django_summernote',
@@ -140,6 +142,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 STATIC_URL = 'static/'
+# Required by whitenoise
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Email
