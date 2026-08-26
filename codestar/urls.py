@@ -20,6 +20,7 @@ from about.views import about as about_view
 
 urlpatterns = [
     path('about/', about_view, name='about'),
+    path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path('', include('blog.urls'), name='blog-urls'),

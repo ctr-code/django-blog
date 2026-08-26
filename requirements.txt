@@ -2,6 +2,7 @@ asgiref==3.12.1
 bleach==6.4.0
 dj-database-url==3.1.2
 Django==6.1
+django-allauth==65.19.1
 django-summernote==0.8.20.0
 dotenv==0.9.9
 gunicorn==26.2.0
