@@ -18,6 +18,8 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Specify a project-wide templates directory
+TEMPLATES_DIR = BASE_DIR / 'templates'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
@@ -78,7 +80,7 @@ ROOT_URLCONF = 'codestar.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -142,7 +144,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 STATIC_URL = 'static/'
-# Required by whitenoise
+# Where project-wide static files live at design time
+STATICFILES_DIRS = [BASE_DIR / 'static', ]
+# Where static files are collected to - required by whitenoise
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Email
