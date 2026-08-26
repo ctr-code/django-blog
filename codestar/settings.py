@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     # This cannot be removed because it implements collectstatic
     'django.contrib.staticfiles',
     'blog',
+    'about',
     'django_summernote',
 ]
 

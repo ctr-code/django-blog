@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+{% load static %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <div class="card-body">
+                <img src="{% static 'images/nobody.jpg' %}" width="100%">
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="card-body">
+                <h2>{{ about.title }}</h2>
+                <p class="card-text">
+                    {{ about.content | safe }}
+                </p>
+                <p class="text-end">Updated on {{ about.updated_on }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
