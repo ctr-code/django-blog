@@ -9,3 +9,13 @@ class About(models.Model):
     # The about message is a singleton
     def __str__(self):
         return "About Page Content"
+
+
+class CollaborationRequest(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.EmailField()
+    message = models.TextField()
+    read = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Collaboration request from {self.name}"
