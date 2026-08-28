@@ -5,6 +5,17 @@ from .forms import CollaborationForm
 
 
 def about(request):
+    """
+    Render the about page and accept user collaboration requests.
+    Displays the single instance of :model:`about.About`.
+    **Context**
+    ``about``
+        The single instance of :model:`about.About`.
+    ``collaboration_form``
+        An instance of :form:`about.CollaborationForm`.
+    **Template:**
+    :template:`about/about.html`
+    """
     # There shouldn't be more than one About row, but limit it just in case
     queryset = About.objects.all()[:1]
     about = get_object_or_404(queryset)

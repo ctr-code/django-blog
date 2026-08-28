@@ -20,6 +20,12 @@ def post_detail(request, slug):
 
     ``post``
         An instance of :model:`blog.Post`.
+    ``comments``
+        A collection of :model:`blog.Comment` related to the instance of :model:`blog.Post`.
+    ``comment_count``
+        The number of approved comments in the `comments` collection.
+    ``comment_form``
+        An instance of :form:`blog.CommentForm`.
 
     **Template:**
 
@@ -58,7 +64,8 @@ def post_detail(request, slug):
 
 def comment_edit(request, slug, comment_id):
     """
-    view to edit comments
+    Accept the contents of an edited comment, update the database
+    and redirect to the :url:`post_detail` containing the comment.
     """
     if request.method == "POST":
 
@@ -81,7 +88,8 @@ def comment_edit(request, slug, comment_id):
 
 def comment_delete(request, slug, comment_id):
     """
-    view to delete comment
+    Delete the given comment and redirect to the :url:`post_detail` that
+    contained the comment.
     """
     queryset = Post.objects.filter(status=1)
     _ = get_object_or_404(queryset, slug=slug)
