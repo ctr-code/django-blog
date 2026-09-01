@@ -13,7 +13,7 @@ As **role** I can **capability** so that **received benefit**.
 
 ## Acceptance Criteria
 
-* citerion_one
+* criterion_one
 
 ## Tasks
 
