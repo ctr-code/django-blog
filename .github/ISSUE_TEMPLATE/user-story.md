@@ -1,7 +1,7 @@
 ---
 name: User Story
 about: Default user story template
-title: 'USER STORY: <Title>'
+title: 'USER STORY: '
 labels: ''
 assignees: ''
 
@@ -13,9 +13,5 @@ As **role** I can **capability** so that **received benefit**.
 
 ## Acceptance Criteria
 
-* criterion_one
-
-## Tasks
-
-* [ ] task_one
+* criterion
 
