@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "CodeStar Blog",
+    "short_name": "CodeStar",
+    "start_url": "/",
+    "display": "standalone",
+    "version": "1.0",
+    "icons": [
+        {
+            "sizes": "64x64",
+            "src": "/static/icon/shield64.png"
+        },
+        {
+            "sizes": "128x128",
+            "src": "/static/icon/shield128.png"
+        },
+        {
+            "sizes": "144x144",
+            "src": "/static/icon/shield144.png"
+        }
+    ]
+}
